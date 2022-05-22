@@ -1,7 +1,7 @@
 package com.day0519.anonymousinnerclass;
 
 /**
- * ÑİÊ¾ÄäÃûÄÚ²¿ÀàµÄÊ¹ÓÃ
+ * æ¼”ç¤ºåŒ¿åå†…éƒ¨ç±»çš„ä½¿ç”¨
  */
 public class Main {
     public static void main(String[] args) {
@@ -10,37 +10,37 @@ public class Main {
     }
 }
 
-class Outer04 { //Íâ²¿Àà
-    private int n1 = 10;//ÊôĞÔ
-    public void method() {//·½·¨
-        //»ùÓÚ½Ó¿ÚµÄÄäÃûÄÚ²¿Àà
+class Outer04 { //å¤–éƒ¨ç±»
+    private int n1 = 10;//å±æ€§
+    public void method() {//æ–¹æ³•
+        //åŸºäºæ¥å£çš„åŒ¿åå†…éƒ¨ç±»
 
-        //1.ĞèÇó£º ÏëÊ¹ÓÃIA½Ó¿Ú,²¢´´½¨¶ÔÏó
-        //2.´«Í³·½Ê½£¬ÊÇĞ´Ò»¸öÀà£¬ÊµÏÖ¸Ã½Ó¿Ú£¬²¢´´½¨¶ÔÏó
-        //3.ÀÏº«ĞèÇóÊÇ Tiger/Dog ÀàÖ»ÊÇÊ¹ÓÃÒ»´Î£¬ºóÃæÔÙ²»Ê¹ÓÃ
-        //4. ¿ÉÒÔÊ¹ÓÃÄäÃûÄÚ²¿ÀàÀ´¼ò»¯¿ª·¢
-        //5. tigerµÄ±àÒëÀàĞÍ ? IA
-        //6. tigerµÄÔËĞĞÀàĞÍ ? ¾ÍÊÇÄäÃûÄÚ²¿Àà  Outer04$1
+        //1.éœ€æ±‚ï¼š æƒ³ä½¿ç”¨IAæ¥å£,å¹¶åˆ›å»ºå¯¹è±¡
+        //2.ä¼ ç»Ÿæ–¹å¼ï¼Œæ˜¯å†™ä¸€ä¸ªç±»ï¼Œå®ç°è¯¥æ¥å£ï¼Œå¹¶åˆ›å»ºå¯¹è±¡
+        //3.è€éŸ©éœ€æ±‚æ˜¯ Tiger/Dog ç±»åªæ˜¯ä½¿ç”¨ä¸€æ¬¡ï¼Œåé¢å†ä¸ä½¿ç”¨
+        //4. å¯ä»¥ä½¿ç”¨åŒ¿åå†…éƒ¨ç±»æ¥ç®€åŒ–å¼€å‘
+        //5. tigerçš„ç¼–è¯‘ç±»å‹ ? IA
+        //6. tigerçš„è¿è¡Œç±»å‹ ? å°±æ˜¯åŒ¿åå†…éƒ¨ç±»  Outer04$1
         /*
-            ÎÒÃÇ¿´µ×²ã »á·ÖÅä ÀàÃû Outer04$1
+            æˆ‘ä»¬çœ‹åº•å±‚ ä¼šåˆ†é… ç±»å Outer04$1
             class Outer04$1 implements IA {
                 @Override
                 public void cry() {
-                    System.out.println("ÀÏ»¢½Ğ»½...");
+                    System.out.println("è€è™å«å”¤...");
                 }
             }
          */
-        //7. jdkµ×²ãÔÚ´´½¨ÄäÃûÄÚ²¿Àà Outer04$1,Á¢¼´ÂíÉÏ¾Í´´½¨ÁË Outer04$1ÊµÀı£¬²¢ÇÒ°ÑµØÖ·
-        //   ·µ»Ø¸ø tiger
-        //8. ÄäÃûÄÚ²¿ÀàÊ¹ÓÃÒ»´Î£¬¾Í²»ÄÜÔÙÊ¹ÓÃ
+        //7. jdkåº•å±‚åœ¨åˆ›å»ºåŒ¿åå†…éƒ¨ç±» Outer04$1,ç«‹å³é©¬ä¸Šå°±åˆ›å»ºäº† Outer04$1å®ä¾‹ï¼Œå¹¶ä¸”æŠŠåœ°å€
+        //   è¿”å›ç»™ tiger
+        //8. åŒ¿åå†…éƒ¨ç±»ä½¿ç”¨ä¸€æ¬¡ï¼Œå°±ä¸èƒ½å†ä½¿ç”¨
         IA tiger = new IA() {
             @Override
             public void cry() {
-                System.out.println("ÀÏ»¢½Ğ»½...");
+                System.out.println("è€è™å«å”¤...");
             }
         };
-        System.out.println("tigerµÄÔËĞĞÀàĞÍ=" + tiger.getClass());
-        //get.class() Êä³öÔËĞĞÀàĞÍ
+        System.out.println("tigerçš„è¿è¡Œç±»å‹=" + tiger.getClass());
+        //get.class() è¾“å‡ºè¿è¡Œç±»å‹
         tiger.cry();
         tiger.cry();
         tiger.cry();
@@ -48,66 +48,66 @@ class Outer04 { //Íâ²¿Àà
 //        IA tiger = new Tiger();
 //        tiger.cry();
 
-        //ÑİÊ¾»ùÓÚÀàµÄÄäÃûÄÚ²¿Àà
-        //·ÖÎö
-        //1. father±àÒëÀàĞÍ Father
-        //2. fatherÔËĞĞÀàĞÍ Outer04$2
-        //3. µ×²ã»á´´½¨ÄäÃûÄÚ²¿Àà
+        //æ¼”ç¤ºåŸºäºç±»çš„åŒ¿åå†…éƒ¨ç±»
+        //åˆ†æ
+        //1. fatherç¼–è¯‘ç±»å‹ Father
+        //2. fatherè¿è¡Œç±»å‹ Outer04$2
+        //3. åº•å±‚ä¼šåˆ›å»ºåŒ¿åå†…éƒ¨ç±»
         /*
             class Outer04$2 extends Father{
                 @Override
                 public void test() {
-                    System.out.println("ÄäÃûÄÚ²¿ÀàÖØĞ´ÁËtest·½·¨");
+                    System.out.println("åŒ¿åå†…éƒ¨ç±»é‡å†™äº†testæ–¹æ³•");
                 }
             }
          */
-        //4. Í¬Ê±Ò²Ö±½Ó·µ»ØÁË ÄäÃûÄÚ²¿Àà Outer04$2µÄ¶ÔÏó
-        //5. ×¢Òâ("jack") ²ÎÊıÁĞ±í»á´«µİ¸ø ¹¹ÔìÆ÷
+        //4. åŒæ—¶ä¹Ÿç›´æ¥è¿”å›äº† åŒ¿åå†…éƒ¨ç±» Outer04$2çš„å¯¹è±¡
+        //5. æ³¨æ„("jack") å‚æ•°åˆ—è¡¨ä¼šä¼ é€’ç»™ æ„é€ å™¨
         Father father = new Father("jack"){
             @Override
             public void test() {
-                System.out.println("ÄäÃûÄÚ²¿ÀàÖØĞ´ÁËtest·½·¨");
+                System.out.println("åŒ¿åå†…éƒ¨ç±»é‡å†™äº†testæ–¹æ³•");
             }
         };
-        System.out.println("father¶ÔÏóµÄÔËĞĞÀàĞÍ=" + father.getClass());//Outer04$2
+        System.out.println("fatherå¯¹è±¡çš„è¿è¡Œç±»å‹=" + father.getClass());//Outer04$2
         father.test();
 
-        //»ùÓÚ³éÏóÀàµÄÄäÃûÄÚ²¿Àà
+        //åŸºäºæŠ½è±¡ç±»çš„åŒ¿åå†…éƒ¨ç±»
         Animal animal = new Animal(){
             @Override
             void eat() {
-                System.out.println("Ğ¡¹·³Ô¹ÇÍ·...");
+                System.out.println("å°ç‹—åƒéª¨å¤´...");
             }
         };
         animal.eat();
     }
 }
 
-interface IA {//½Ó¿Ú
+interface IA {//æ¥å£
     public void cry();
 }
 //class Tiger implements IA {
 //
 //    @Override
 //    public void cry() {
-//        System.out.println("ÀÏ»¢½Ğ»½...");
+//        System.out.println("è€è™å«å”¤...");
 //    }
 //}
 //class Dog implements  IA{
 //    @Override
 //    public void cry() {
-//        System.out.println("Ğ¡¹·ÍôÍô...");
+//        System.out.println("å°ç‹—æ±ªæ±ª...");
 //    }
 //}
 
-class Father {//Àà
-    public Father(String name) {//¹¹ÔìÆ÷
-        System.out.println("½ÓÊÕµ½name=" + name);
+class Father {//ç±»
+    public Father(String name) {//æ„é€ å™¨
+        System.out.println("æ¥æ”¶åˆ°name=" + name);
     }
-    public void test() {//·½·¨
+    public void test() {//æ–¹æ³•
     }
 }
 
-abstract class Animal { //³éÏóÀà
+abstract class Animal { //æŠ½è±¡ç±»
     abstract void eat();
 }
