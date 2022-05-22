@@ -2,13 +2,13 @@ package com.day0508.ToString;
 
 public class Main {
     public static void main(String[] args) {
-        Monster monster = new Monster("Ğ¡Ñı¹Ö","Ñ²É½µÄ",1000);
+        Monster monster = new Monster("å°å¦–æ€ª","å·¡å±±çš„",1000);
         System.out.println(monster.toString() + " hashCode=" + monster.hashCode());
         /*
-        ObjectµÄtoString·½·¨
+        Objectçš„toStringæ–¹æ³•
         public String toString() {
-        //getClass().getName() ÀàµÄÈ«ÀàÃû£¨°üÃû+ÀàÃû£©
-        //Integer.toHexString(hashCode()) ½«¶ÔÏóµÄhashCode×ª³É16½øÖÆ×Ö·û´®
+        //getClass().getName() ç±»çš„å…¨ç±»åï¼ˆåŒ…å+ç±»åï¼‰
+        //Integer.toHexString(hashCode()) å°†å¯¹è±¡çš„hashCodeè½¬æˆ16è¿›åˆ¶å­—ç¬¦ä¸²
         return getClass().getName() + "@" + Integer.toHexString(hashCode());
         }
         */
@@ -26,8 +26,8 @@ class Monster{
         this.sal = sal;
     }
 
-    //ÖØĞ´toString·½·¨£¬Êä³ö¶ÔÏóµÄÊôĞÔ¡£
-    //Ê¹ÓÃ¿ì½İ¼ü alt+ins toString()
+    //é‡å†™toStringæ–¹æ³•ï¼Œè¾“å‡ºå¯¹è±¡çš„å±æ€§ã€‚
+    //ä½¿ç”¨å¿«æ·é”® alt+ins toString()
     @Override
     public String toString() {
         return "Monster{" +
