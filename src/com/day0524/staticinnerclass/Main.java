@@ -6,6 +6,9 @@ public class Main {
         outer.m();
         Outer.Inner inner = new Outer.Inner();
         inner.say();
+
+        Outer.Inner inner1 = Outer.getInner1();
+        inner1.say();
     }
 }
 class Outer{
@@ -18,12 +21,20 @@ class Outer{
     //4.可以添加任意访问修饰符（public protected 默认 private），因为它的地位就是一个成员。
     public static class Inner{
         public void say(){
-            System.out.println(name);
+            String name = "李四";
+            System.out.println(name + " 外部类成员：" + Outer.name);
         }
     }
 
     public void m(){
         Inner inner = new Inner();
         inner.say();
+    }
+
+    public Inner getInner(){
+        return new Inner();
+    }
+    public static Inner getInner1(){
+        return new Inner();
     }
 }
