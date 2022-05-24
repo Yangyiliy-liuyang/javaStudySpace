@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Outer outer = new Outer();
         outer.m();
+        Outer.Inner inner = new Outer.Inner();
+        inner.say();
     }
 }
 class Outer{
