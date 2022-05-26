@@ -17,11 +17,11 @@ public class MyMain {
                 +"\t2.退出游戏\n"
                 ;
         String [] options = {"1","2"};
-        Object choice =JOptionPane.showInputDialog(null, //父对话框
+        Object choice = JOptionPane.showInputDialog(null, //父对话框
                 menu, //显示信息
                 "开始", //标题
                 0, //图标类型
-                new ImageIcon("images/sasquatch.png"), //图片
+                new ImageIcon("images/开始界面.jpg"), //图片
                 options, //输入内容，数组形式放入
                 "A")
                 ;//默认输入值
