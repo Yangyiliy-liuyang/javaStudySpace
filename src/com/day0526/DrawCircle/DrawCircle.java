@@ -46,7 +46,7 @@ class MyPanel extends JPanel {
         super.paint(g);//调用父类的方法完成初始化.
         System.out.println("paint 方法被调用了~");
         //画出一个圆形.
-        g.drawOval(10, 10, 100, 100);
+        //g.drawOval(10, 10, 100, 100);
 
 
         //演示绘制不同的图形..
