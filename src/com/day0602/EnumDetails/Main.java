@@ -11,11 +11,20 @@ public class Main {
         System.out.println(autumn.name());
         //输出该枚举对象的次序、编号，从零开始。
         System.out.println(autumn.ordinal());//2
+        //返回当前枚举类中所有的常量
         Season[] values = Season.values();
         for (Season i :
                 values) {
-            System.out.println(i.toString());
+            System.out.println(i);
         }
+
+        System.out.println();
+        //根据输入的name，在Season中查找，如果查到了，就返回给autumu1.
+        //找不到就报错
+        Season autumn1 = Season.valueOf("AUTUMN");
+        System.out.println(autumn1);
+        System.out.println(autumn == autumn1);
+        System.out.println(Season.SPRING.compareTo(Season.SUMMER));
         System.out.println();
         int[] nums = {1,2,32,31,43};
         //增强for循环
