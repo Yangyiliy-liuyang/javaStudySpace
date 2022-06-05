@@ -34,8 +34,12 @@ public class Main {
         }
     }
 }
+//抑制警告信息
+@SuppressWarnings({"all"})
+//表示Season过时了，版本过度。
+@Deprecated
 enum Season {
-
+    //不能继承其他类了，enum隐式继承Enum
     SPRING("春天", "温暖"),
     WINTER("冬天", "寒冷"),
     AUTUMN("秋天", "凉爽"),
