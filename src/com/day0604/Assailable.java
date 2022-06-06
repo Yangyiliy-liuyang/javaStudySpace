@@ -12,7 +12,7 @@ public interface Assailable {
     int getHp();
     void setHp(int hp);
     void fight(Assailable assa);
-    boolean canFightByDistance(Assailable assa,int distance1,int distance2);
+    boolean canFightByDistance(Assailable assa);
 
 
 }

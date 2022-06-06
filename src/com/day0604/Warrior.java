@@ -88,5 +88,10 @@ public class Warrior extends Hero{
         super.fight(assa);
     }
 
+    @Override
+    public boolean canFightByDistance(Assailable assa) {
+        return false;
+    }
+
 
 }

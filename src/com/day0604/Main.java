@@ -1,5 +1,9 @@
 package com.day0604;
 
+import java.applet.Applet;
+import java.applet.AudioClip;
+import java.io.File;
+import java.net.MalformedURLException;
 import java.util.Scanner;
 
 /**
@@ -8,12 +12,13 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class Main {
-    public static void menu() throws InterruptedException {
+    public static void menu() throws InterruptedException, MalformedURLException {
         Hero palyer = new Warrior();
         Hero kai = new Warrior(00012, "凯", 1, 0, 0, 200, 5, 28);
         Hero caocao = new Warrior(00013, "曹操", 1, 0, 0, 200, 6, 27);
         Hero liubei = new Warrior(00022, "刘备", 2, 100, 100, 150, 10, 35);
         Hero zhubajie = new Warrior(00023, "猪八戒", 1, 100, 100, 200, 5, 25);
+        AudioClip sound = Applet.newAudioClip(new File("sounds/大厅背景音乐.wav").toURL());
         System.out.println("          -------------------");
         System.out.println("        -|                   |-");
         System.out.println("         |      王者荣耀       |");
@@ -28,10 +33,11 @@ public class Main {
         System.out.print(".");
         Thread.sleep(1000);
         System.out.println(".");
+
         System.out.println("请选择你的英雄:");
         System.out.println("1.凯\t" + "2.曹操");
         Scanner scanner = new Scanner(System.in);
-        int choice = 1;//scanner.nextInt();
+        int choice = scanner.nextInt();
         if (choice == 1) {
             System.out.println("你的英雄信息为:" + kai);
             palyer = kai;
@@ -72,7 +78,7 @@ public class Main {
         }
         System.out.println("继续移动...");
     }
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, MalformedURLException {
         menu();
         //GameFrame gameFrame = new GameFrame();
         //gameFrame.launch();

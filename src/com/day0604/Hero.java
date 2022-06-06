@@ -112,10 +112,4 @@ public abstract class Hero implements Assailable{
 
     }
 
-    @Override
-    public boolean canFightByDistance(Assailable assa, int distance1, int distance2) {
-        int maxdistance = Math.max(distance1,distance2);
-        //if (maxdistance)
-        return false;
-    }
 }

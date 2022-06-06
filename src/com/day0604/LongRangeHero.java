@@ -19,6 +19,6 @@ public abstract class LongRangeHero extends Hero{
 
     @Override
     public boolean canFightByDistance(Assailable assa) {
-        return super.canFightByDistance(assa);
+        return false;
     }
 }
