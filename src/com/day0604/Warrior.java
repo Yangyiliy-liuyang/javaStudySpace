@@ -84,14 +84,12 @@ public class Warrior extends Hero{
     }
 
     @Override
-    public void fight(Assailable assa) {
-        super.fight(assa);
+    public void fight(Hero hero) {
+        super.fight(hero);
     }
 
     @Override
-    public boolean canFightByDistance(Assailable assa) {
-        return false;
+    public boolean canFightByDistance(Hero hero) {
+        return super.canFightByDistance(hero);
     }
-
-
 }

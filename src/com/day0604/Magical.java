@@ -11,12 +11,12 @@ public class Magical extends LongRangeHero{
     }
 
     @Override
-    public void fight(Assailable assa) {
-        super.fight(assa);
+    public void fight(Hero hero) {
+        super.fight(hero);
     }
 
     @Override
-    public boolean canFightByDistance(Assailable assa) {
-        return super.canFightByDistance(assa);
+    public boolean canFightByDistance(Hero hero) {
+        return super.canFightByDistance(hero);
     }
 }

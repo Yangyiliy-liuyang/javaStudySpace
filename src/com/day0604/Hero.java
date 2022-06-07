@@ -108,8 +108,22 @@ public abstract class Hero implements Assailable{
     }
 
     @Override
-    public void fight(Assailable assa) {
-
+    public void fight(Hero hero) {
+        if(this.canFightByDistance(hero) == true){
+            System.out.println("你攻击了敌方英雄,造成了" + this.ATK + "点伤害！");
+            hero.Hp-=this.ATK;
+        }
     }
 
+    @Override
+    public boolean canFightByDistance(Hero hero) {
+        boolean flag = false;
+        double mindistance = Math.sqrt(Math.abs((this.getX() - hero.getX())*
+                (this.getX() - hero.getX())+(this.getY() - hero.getY())* (this.getY() - hero.getY())));
+        if(mindistance < this.distance ){
+            //玩家可以打到敌方英雄，敌方攻击距离不够
+            flag = true;
+        }
+        return  flag;
+    }
 }

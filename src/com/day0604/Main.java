@@ -76,7 +76,22 @@ public class Main {
                 palyer.setX(palyer.getDistance());
                 break;
         }
-        System.out.println("继续移动...");
+        boolean loop = true;
+        String choice1 = "";
+        do {
+            //用户必须输入y/n，否则一直循环。
+            System.out.println("你要继续吗？（y/n）");
+            choice1 = scanner.next();
+            if("y".equals(choice1)) {
+                System.out.println(palyer.getName() + "继续向上路移动了" + palyer.getDistance() + "个距离");
+                palyer.setY(palyer.getY()+palyer.getDistance());
+            }
+        } while (!"y".equals(choice1) && !"n".equals(choice1));
+        System.out.println(palyer.getName() + "当前位置为(" + palyer.getX() +"," + palyer.getY() + ").");
+        liubei.setX(0);
+        liubei.setY(11);
+        palyer.fight(liubei);
+
     }
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
         menu();

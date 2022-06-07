@@ -31,13 +31,17 @@ public class WatchTower implements Assailable{
 
     }
 
+    public WatchTower() {
+        super();
+    }
+
     @Override
-    public void fight(Assailable assa) {
+    public void fight(Hero hero) {
 
     }
 
     @Override
-    public boolean canFightByDistance(Assailable assa) {
+    public boolean canFightByDistance(Hero hero) {
         return false;
     }
 }

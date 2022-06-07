@@ -11,8 +11,8 @@ public interface Assailable {
     int getY();
     int getHp();
     void setHp(int hp);
-    void fight(Assailable assa);
-    boolean canFightByDistance(Assailable assa);
+    void fight(Hero hero);
+    boolean canFightByDistance(Hero hero);
 
 
 }

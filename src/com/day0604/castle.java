@@ -33,14 +33,15 @@ public class castle implements Assailable{
     }
 
     @Override
-    public void fight(Assailable assa) {
+    public void fight(Hero hero) {
 
     }
 
     @Override
-    public boolean canFightByDistance(Assailable assa) {
+    public boolean canFightByDistance(Hero hero) {
         return false;
     }
+
 
     public castle() {
         super();
