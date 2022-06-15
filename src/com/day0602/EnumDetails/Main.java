@@ -24,7 +24,12 @@ public class Main {
         Season autumn1 = Season.valueOf("AUTUMN");
         System.out.println(autumn1);
         System.out.println(autumn == autumn1);
-        System.out.println(Season.SPRING.compareTo(Season.SUMMER));
+
+
+        //compareTo: 比较两个枚举常量，比较的是编号。
+        System.out.println(Season.SPRING.compareTo(Season.SUMMER));//0-3=-3
+
+
         System.out.println();
         int[] nums = {1,2,32,31,43};
         //增强for循环
